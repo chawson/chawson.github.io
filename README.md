@@ -4,4 +4,4 @@ Just another repository
 Chawsom Edit Markdown
 =====================
 
-[Chawson] xiaochangchs@gmail.com
+[Chawson]: mailto:xiaochangchs@gmail.com
