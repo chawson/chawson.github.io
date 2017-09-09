@@ -1,3 +1,4 @@
+alert("success")
 ;(function() {
     var _0 = document.querySelector("input#ocvx");
     var _2 = document.querySelector('video#main');
