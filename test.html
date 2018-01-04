@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+<script>
+try{
+  var storage = localStorage.getItem('success');
+  if(storage===null){
+    localStorage.setItem('success','success');
+    alert('failed!');
+    location.reload();
+  }else{
+    alert('success');
+  }
+}catch(err){
+  alert(err)
+}
+</script>
+</body>
+</html>
