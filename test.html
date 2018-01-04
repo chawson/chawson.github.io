@@ -4,18 +4,7 @@
 </head>
 <body>
 <script>
-try{
-  var storage = localStorage.getItem('success');
-  if(storage===null){
-    localStorage.setItem('success','success');
-    alert('failed!');
-    location.reload();
-  }else{
-    alert('success');
-  }
-}catch(err){
-  alert(err)
-}
+alert('localStorage' in window);
 </script>
 </body>
 </html>
