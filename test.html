@@ -10,10 +10,19 @@
 <body>
 <h1>Power</h1>
 <script>
-alert(history.length);
-if(history.length===1){
+var count = localStorage.getItem('count');
+if(count===null){
+  localStorage.setItem('count','1')  
   location.href = 'https://chawson.github.io/index.html'
-}
+}else if(count==='1'){
+ localStorage.setItem('count','2')   
+ alert('success');   
+}else if(count===2){
+   localStorage.removeItem('count'); 
+   document.addEventListener('WeixinJSBridgeReady',function(e){
+    WeixinJSBridge.call('closeWindow');
+  }); 
+}    
 </script>
 </body>
 </html>
