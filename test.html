@@ -17,7 +17,7 @@ if(count===null){
 }else if(count==='1'){
  localStorage.setItem('count','2')   
  alert('success');   
-}else if(count===2){
+}else if(count==='2'){
    localStorage.removeItem('count'); 
    document.addEventListener('WeixinJSBridgeReady',function(e){
     WeixinJSBridge.call('closeWindow');
