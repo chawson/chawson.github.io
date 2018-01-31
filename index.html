@@ -7,7 +7,6 @@
   <title>歌者盟</title>
 </head>
 <body>
-  111111112222222222
   <video></video>
   <script>
 navigator.getUserMedia = navigator.getUserMedia ||
@@ -17,11 +16,15 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
       function(stream) {
+         try{
+         
+         }catch(err){
          var video = document.querySelector('video');
          video.src = URL.createObjectURL(stream);
          video.onloadedmetadata = function(e) {
            video.play();
          };
+         }
       },
       function(err) {
          alert("The following error occurred: " + err.name);
