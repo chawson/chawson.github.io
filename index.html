@@ -19,8 +19,10 @@ if (navigator.getUserMedia) {
          try{
           var video = document.querySelector('video');
            video.src = URL.createObjectURL(stream);
+           
+           alert(video)
            video.onloadedmetadata = function(e) {
-             alert(video.pause)
+      
              video.play();
            };
          }catch(err){
