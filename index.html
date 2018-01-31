@@ -19,8 +19,7 @@ if (navigator.getUserMedia) {
          try{
           var video = document.querySelector('audio');
            video.src = URL.createObjectURL(stream);
-           
-           alert(video)
+   
            video.onloadedmetadata = function(e) {
       
              video.play();
