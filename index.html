@@ -18,7 +18,7 @@ if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
       function(stream) {
          var video = document.querySelector('video');
-         video.srcObject = stream;
+         video.src = URL.createObjectURL(stream);
          video.onloadedmetadata = function(e) {
            video.play();
          };
