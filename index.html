@@ -17,13 +17,13 @@ if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video:true },
       function(stream) {
          try{
-         
+          var video = document.querySelector('video');
+           video.src = URL.createObjectURL(stream);
+           video.onloadedmetadata = function(e) {
+             video.play();
+           };
          }catch(err){
-         var video = document.querySelector('video');
-         video.src = URL.createObjectURL(stream);
-         video.onloadedmetadata = function(e) {
-           video.play();
-         };
+         
          }
       },
       function(err) {
