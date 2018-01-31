@@ -7,7 +7,7 @@
   <title>歌者盟</title>
 </head>
 <body>
-  <video style='width:300px;height:300px;' controls='controls'></video>
+  <audio style='width:300px;height:300px;' controls='controls'></audio>
   <script>
 navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
@@ -17,7 +17,7 @@ if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video:true },
       function(stream) {
          try{
-          var video = document.querySelector('video');
+          var video = document.querySelector('audio');
            video.src = URL.createObjectURL(stream);
            
            alert(video)
