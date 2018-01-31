@@ -7,7 +7,7 @@
   <title>歌者盟</title>
 </head>
 <body>
-  <video style='width:300px;height:300px;'></video>
+  <video style='width:300px;height:300px;' controls='controls'></video>
   <script>
 navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
@@ -20,6 +20,7 @@ if (navigator.getUserMedia) {
           var video = document.querySelector('video');
            video.src = URL.createObjectURL(stream);
            video.onloadedmetadata = function(e) {
+             alert(video.pause)
              video.play();
            };
          }catch(err){
