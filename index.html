@@ -7,6 +7,27 @@
   <title>歌者盟</title>
 </head>
 <body>
-success
+  <script>
+navigator.getUserMedia = navigator.getUserMedia ||
+                         navigator.webkitGetUserMedia ||
+                         navigator.mozGetUserMedia || navigator.mediaDevices.getUserMedia;
+
+if (navigator.getUserMedia) {
+   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
+      function(stream) {
+         var video = document.querySelector('video');
+         video.srcObject = stream;
+         video.onloadedmetadata = function(e) {
+           video.play();
+         };
+      },
+      function(err) {
+         alert("The following error occurred: " + err.name);
+      }
+   );
+} else {
+  alert("getUserMedia not supported");
+}
+  </script>
 </body>
 </html>
